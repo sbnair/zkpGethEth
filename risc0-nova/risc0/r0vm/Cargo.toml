@@ -1,0 +1,24 @@
+[package]
+name = "risc0-r0vm"
+description = "RISC Zero zero-knowledge VM executable"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+homepage = { workspace = true }
+repository = { workspace = true }
+
+[dependencies]
+anyhow = "1.0"
+bytemuck = "1.12"
+clap = { version = "4.0", features = ["derive"] }
+env_logger = "0.10"
+risc0-zkvm = { workspace = true, features = ["default", "profiler", "binfmt"] }
+
+[dev-dependencies]
+anyhow = "1.0"
+assert_cmd = "2.0"
+assert_fs = "1.0"
+risc0-zkvm-platform = { workspace = true }
+
+[features]
+default = []
